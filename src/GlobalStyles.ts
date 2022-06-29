@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #ccc;
+    //background-color: #ccc;
     min-width: 360px;
   }
 `;

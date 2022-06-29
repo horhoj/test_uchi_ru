@@ -31,9 +31,7 @@ const SWrap = styled.div`
   margin: 0 auto;
 `;
 
-const SMain = styled.main`
-  padding: 10px;
-`;
+const SMain = styled.main``;
 
 const SHeader = styled.header`
   min-height: 60px;
