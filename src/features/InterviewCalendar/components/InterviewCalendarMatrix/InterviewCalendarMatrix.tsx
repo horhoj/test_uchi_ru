@@ -24,7 +24,7 @@ export const InterviewCalendarMatrix: FC = () => {
 
   const dataMatrix: DataMatrix = getDataMatrix(currentEventDateTimeList);
 
-  // console.log('Это матрица данных для вывода', dataMatrix);
+  console.log('Это матрица данных для вывода', dataMatrix);
 
   const handeEventButtonClick = (matrixItem: MatrixItem) => {
     dispatch(interviewCalendarSlice.actions.setCurrentMatrixItem(matrixItem));

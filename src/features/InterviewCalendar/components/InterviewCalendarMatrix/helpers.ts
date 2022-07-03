@@ -11,9 +11,12 @@ export const getDataMatrix = (
   currentEventDateTimeList.forEach((eventDateTime) => {
     const currentEventDateTime = new Date(eventDateTime);
     //1 отнимаем так как неделя у нас с понедельника, а не с воскресенья
-    const currentDayOfWeek = currentEventDateTime.getDay() - 1;
+    const dayOfWeek = currentEventDateTime.getDay() - 1;
+    //кольцевой переход для воскресенья
+    const currentDayOfWeek = dayOfWeek >= 0 ? dayOfWeek : 6;
+
     const currentHours = currentEventDateTime.getHours();
-    // console.log(currentEventDateTime, currentDayOfWeek, currentHours);
+    console.log(currentEventDateTime, currentDayOfWeek, currentHours);
 
     dataMatrix[createDataMatrixKey(currentDayOfWeek, currentHours)] = true;
   });
